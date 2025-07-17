@@ -8,8 +8,8 @@ resource "azurerm_resource_group" "rg" {
 }
 resource "azurerm_storage_account" "storage" {
   name                     = "vinstorageacctdemo"        # must be globally unique, 3–24 lowercase letters/numbers
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
+  resource_group_name      = example-rg
+  location                 = East US
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
